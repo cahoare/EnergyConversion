@@ -40,3 +40,24 @@ alpha_dc = alpha_c/10 ; % set in relation to current controller
 kp_dc = alpha_dc;
 ki_dc = alpha_dc^2/2;
 
+
+%Speed Controller
+%i_d_ref = 1/LM;
+J = 50;
+b = 0.5; %Load Torque
+t_speed = t_rc*50;
+alpha_speed = 2.19722/t_speed;
+kp_speed = alpha_speed*J;
+ki_speed = alpha_speed*alpha_speed*J;
+Ra_speed = alpha_speed*J-b;
+
+
+%Improved CM
+alpha_l = 4; %eq 9.30
+lambda_delta = 0.2*1;
+lambda = 1.5;
+
+
+%FW Controller
+%kfw in Simulink
+epsilon = (Lsigma+LM)/Lsigma;
