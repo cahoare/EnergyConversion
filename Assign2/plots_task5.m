@@ -4,9 +4,7 @@ hold all
 ax1 = subplot(2,2,1);
 x = t/w_base;
 y111 = sqrt(i_s_s_alpha.^2+i_s_s_beta.^2);
-yx1 = i_s_s_alpha;
-yx2 = i_s_s_beta;
-plot(ax1,x,y111,x,yx1,x,yx2)
+plot(ax1,x,y1,x,y11,x,y111)
 legend('RR = 0.06151 [p.u]', 'RR = 2*0.06151 [p.u]', '0.5*RR = 0.06151 [p.u]');
 title(ax1,'Stator Current - Direct Line Start, b=0')
 ylabel(ax1,'Stator Current Modulus [p.u]')
