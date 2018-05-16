@@ -24,3 +24,9 @@ alpha_speed = 2.19722/t_speed;
 kp_speed = alpha_speed*J;
 ki_speed = alpha_speed*alpha_speed*J;
 Ra_speed = alpha_speed*J-b;
+
+figure
+compass(0.1, 0.2)
+hold on
+compass(0.76, 0)
+compass(0, -0.05)
