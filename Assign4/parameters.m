@@ -52,7 +52,7 @@ RRhat = 2*0.06151;
 
 simOut=sim('A4T3_BasicCurrentModel') ;
 
-%{
+
 ta(1:L,2) = t(1:L,1);
 wma(1:L,2) = wm(1:L,1);
 psida(1:L,2) = psi_d(1:L,1);
@@ -101,4 +101,4 @@ ylabel('Flux [p.u]')
 xlabel('Time [secs]');
 axis([0.47 1.5 -1.0  0.8])
 %yticks([-0.5 -0.4 -.3 -.2 -.1 0 .1 .2 .3])
-%}
+

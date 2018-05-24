@@ -4,9 +4,9 @@ hold all
 x = t/w_base;
 plot(x,psi_d,x,psi_q)
 legend('psi_d', 'psi_q');
-title('D and Q Axis Rotor Flux - Erroneous R_R and L_M')
+title('D and Q Axis Rotor Flux - Misaligned')
 ylabel('Flux [p.u]')
-xlabel('Time [p.u]');
+xlabel('Time [s]');
 
 % ax1 = subplot(2,1,2);
 % x = t/w_base;

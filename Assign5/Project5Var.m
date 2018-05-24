@@ -19,16 +19,16 @@ P = 1800 % W . C = 80 uF/kW
 
 
 %%%%%%%%%%%%%%%%%%
-E = 1.0;
+E = 1.0%*sqrt(2); % WHY NOT SQRT(2) *
 wref = 1.0;
-K = 1.0;
+%K = sqrt(3/2);
 wbase =314;
 
 %%% PLL
 alpha_p = alpha_c/10 ; % set in relation to current controller
 kp_pll = alpha_p; 
 ki_pll = alpha_p^2/2;
-alpha_f = 5*alpha_p; % LPF bandwidth. Set so greater than bandwidth of PLL
+alpha_f = 5*alpha_p; % LPF bandwidth. Set so IS greater than bandwidth of PLL
 
 
 %%% Current control
@@ -36,7 +36,7 @@ alpha_fc = 0.5*alpha_c
 
 %%% DC Link Model
 C = 1.5*1800/1000*80*10^-6 * Z_base *w_base; %pu
-alpha_dc = alpha_c/10 ; % set in relation to current controller
+alpha_dc = alpha_c/20 ; % set in relation to current controller
 kp_dc = alpha_dc;
 ki_dc = alpha_dc^2/2;
 
